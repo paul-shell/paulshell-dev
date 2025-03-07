@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"="width=device-width, initial-scale=1.0">
+    <title>Paul Shell</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .nodisplay {
+            display: none;
+        }
+        
+        /* Media container styles */
+        .media-container {
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .media-container img, 
+        .media-container video {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        /* Twitter embed responsiveness */
+        .project-updates .twitter-tweet, 
+        .method-tweet .twitter-tweet {
+            max-width: 100% !important;
+        }
+        
+        /* Twitter embeds flex layout */
+        .project-updates {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        /* Each Twitter embed container */
+        .project-updates .twitter-tweet {
+            flex: 0 0 auto;
+            margin: 0 !important; /* Override Twitter's default margins */
+            width: 300px !important; /* Default size for desktop to fit 3 per row */
+        }
+        
+        /* Responsive layouts */
+        @media (min-width: 1200px) {
+            /* Large desktop - 3 tweets per row */
+            .project-updates .twitter-tweet {
+                width: 330px !important;
+            }
+        }
+        
+        @media (min-width: 768px) and (max-width: 1199px) {
+            /* Medium screens - 2 tweets per row */
+            .project-updates .twitter-tweet {
+                width: 350px !important;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            /* Mobile - 1 tweet per row */
+            .project-updates {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .project-updates .twitter-tweet {
+                width: 100% !important;
+                max-width: 550px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="main-nav" class="">
+        <div class="nav-container">
+            <div class="logo"></div>
+            <div class="nav-links">
+                <a href="#home">Summary</a>
+                <!-- <a href="#method">Method</a> -->
+                <a href="#projects">Projects</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#recommendations">Recommendations</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Section (replacing Hero) -->
+    <section id="home" class="profile">
+        <div class="container profile-container">
+            <div class="profile-info">
+                <h1>Paul L. Shell III</h1>
+                <p class="profile-description">Microsoft alum, startup founder, and software engineer with over 15 years of experience. I have 10+ years designing and implementing Azure solutions and 10+ years in AI engineering. I transform problems into technological solutions that improve lives.</p>
+                <div class="profile-social-links">
+                    <a href="https://www.linkedin.com/in/paul-shell/" target="_blank" class="social-link">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <span class="social-username">paul-shell</span>
+                    </a>
+                    <a href="https://x.com/PaulShellDev" target="_blank" class="social-link">
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <span class="social-username">PaulShellDev</span>
+                    </a>
+                </div>
+            </div>
+            <div class="profile-image-container">
+                <div class="profile-image">
+                    <img src="img/avatar.png" alt="Paul Shell">
+                </div>
+                <div class="profile-details">
+                    <div class="profile-detail">
+                        <div class="detail-logo">
+                            <img src="img/gauntletai_logo.jpg" alt="Gauntlet AI Logo">
+                        </div>
+                        <div class="detail-text">
+                            <p>Gauntlet AI</p>
+                        </div>
+                    </div>
+                    <div class="profile-detail">
+                        <div class="detail-logo">
+                            <img src="img/microsoft_logo.jpg" alt="Microsoft Logo">
+                        </div>
+                        <div class="detail-text">
+                            <p>Microsoft Alum</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Madness Method Section -->
+        <section id="method" class="method">
+            <div class="container">
+                <h2 class="section-title"><span class="strikethrough">Madness</span> Method</h2>
+                <div class="method-content">
+                    <div class="nodisplay method-text">
+                        <div class="method-step">
+                            <h3>1. Brainstorm</h3>
+                            <p></p>
+                        </div>
+
+                        <div class="method-step">
+                            <h3>2. Planning</h3>
+                            <p></p>
+                        </div>
+
+                        <div class="method-step">
+                            <h3>3. Execution</h3>
+                            <p></p>
+                        </div>
+
+                        <div class="method-step">
+                            <h3>4. Deploy</h3>
+                            <p>
+                                Authentication: OAuth JWT with Google, Apple, and Microsoft.
+                                Authorization: Role-based access control (RBAC) with Azure AD.
+                                Data protection: Azure Key Vault
+                                Networking: Azure Virtual Network, Azure Private Endpoints, Azure Firewall, Azure DDoS Protection, Azure Web Application Firewall (WAF), Azure Application Gateway, Azure Load Balancer, Azure Traffic Manager, Azure DNS, Azure CDN, Azure Front Door
+                                Monitoring: Azure Monitor and Application Insights.
+                                CI/CD: GitHub Actions.
+                                Planning: GitHub Projects.
+                                Compute: Azure Container Apps (managed Kubernetes)
+                                Containerization: Docker
+                                Storage: Azure Blob Storage
+                                Database: Azure Cosmos DB
+                                Messaging: Azure Service Bus, Storage Queues
+                                AI: Azure OpenAI
+                            </p>
+                        </div>
+                    </div>
+                    <div class="method-tweet">
+                        <blockquote class="twitter-tweet" data-width="550" data-theme="dark">
+                            <a href="https://twitter.com/Austen/status/1883925353930047870"></a>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Recent Projects</h2>
+            
+            <div class="project-card-full">
+                <div class="project-header">
+                    <h3>PaulShell.dev</h3>
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-image">
+                        <img src="img/paulshelldev.jpg" alt="PaulShell.dev Website" class="project-img">
+                    </div>
+                    
+                    <div class="project-info-full">
+                        <p>The website you are <b>currently on</b>. Showcasing my projects and a chat bot to interact with.</p>
+                        
+                        <h4>Technologies</h4>
+                        <ul class="tech-list">
+                            <li><strong>Visual Studio Code</strong> <strong>GitHub Copilot</strong> with <strong>Claude 3.7 Sonnet</strong> built it</li>
+                            <li><strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong></li>
+                            <li><strong>Azure Static Websites</strong> to host it</li>
+                            <li><strong>Azure OpenAI</strong> for the chat bot</li>
+                        </ul>
+                        
+                        <div class="project-links">
+                            <a href="https://github.com/paul-shell/paulshell-dev" target="_blank" class="link">Source <i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card-full">
+                <div class="project-header">
+                    <h3>WebsitePeak, LLC</h3>
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-image">
+                        <img src="img/websitepeak.jpg" alt="WebsitePeak Project" class="project-img">
+                    </div>
+                    
+                    <div class="project-info-full">
+                        <p>Transforming slow, underperforming websites into lightning-fast experiences that both visitors and search engines love.</p>
+                        <p>We achieve this through a two-pronged approach: First, our service intelligently optimizes your site's resources (<strong>compressing images</strong>, <strong>reducing and minimizing code</strong>, <strong>prioritizing critical content</strong>) to dramatically <strong>reduce load times</strong>.</p>
+                        <p>Second, we create <strong>specialized versions</strong> of your pages that search engines can index instantly, boosting your visibility in search results. This balance of user experience and search performance delivers concrete business results: <strong>90%+ PageSpeed scores</strong>, <b>higher search rankings</b>, and <b>increased conversion rates</b>.</p>
+                        <p>Connect your site, and our <strong>AI-powered</strong> <strong>cloud infrastructure</strong> handles the complex optimization work automatically.</p>
+                        
+                        <h4>Technologies</h4>
+                        <ul class="tech-list">
+                            <li>Optimizing <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>images</strong>, and <strong>fonts</strong> to improve performance utilizing <strong>OpenAI</strong></li>
+                            <li><strong>Hosting</strong> and <strong>CDN</strong> with <strong>Azure Kubernetes</strong> and <strong>Front Door</strong></li>
+                            <li>Problem explanation video (linked below) created using <strong>InVideo AI</strong> with <strong>voice cloning</strong> from a recording of my fiancée</li>
+                        </ul>
+                        
+                        <div class="project-links">
+                            <a href="https://websitepeak.com" target="_blank" class="link">Website <i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://youtube.com/shorts/dRIm026UciI" target="_blank" class="link">Video <i class="fas fa-video"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card-full">
+                <div class="project-header">
+                    <h3>Voice / Gestures</h3>
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-image">
+                        <img src="img/iron_man.jpg" alt="Voice / Gestures Project" class="project-img">
+                    </div>
+                    
+                    <div class="project-info-full">
+                        <p>This project started as a fun way of using voice to control the computer without touching the keyboard or mouse. I added left and right hand gestures to control two editors at the same time. I got bored of the downtime when just interacting with one LLM waiting for the response. During the Hackathon, I added Iron Man gauntlet recognition (which was crazy hard because of the colors).<br>Gestures recognized include fist, index up, palm, hand spread, Spock, and left/right hand detection.</p>
+                        
+                        <h4>Technologies</h4>
+                        <ul class="tech-list">
+                            <li><strong>Whisper</strong> for speech-to-text</li>
+                            <li><strong>OpenCV</strong> and <strong>MediaPipe</strong> for gesture recognition</li>
+                        </ul>
+                        
+                        <div class="project-links">
+                            <a href="https://gist.github.com/paul-shell/29ae0c640b6a86bd009e37923b9e9ef6" target="_blank" class="link">v1 Source<i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-updates">
+                    <!-- <div class="media-container">
+                        <img src="img/voice_gestures.gif" alt="Voice and Gesture Recognition Demo" class="media-item">
+                    </div> -->
+                    
+                    <blockquote class="twitter-tweet" data-width="550" data-theme="dark">
+                        <a href="https://twitter.com/PaulShellDev/status/1883662935836508231"></a>
+                    </blockquote>
+                </div>
+            </div>
+            
+            <div class="project-card-full">
+                <div class="project-header">
+                    <h3>Video</h3>
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-image">
+                        <img src="img/gauntlet_exchange.jpg" alt="Gauntlet Exchange Video Service" class="project-img">
+                    </div>
+                    
+                    <div class="project-info-full">
+                        <p>Day 1 in-person in Austin, created a TikTok clone with scrolling video playback. After the PoC, I wanted to learn more about streaming videos. This led to creating a HLS video processing service, which I shared for fellow developers to use. Using FFMPEG, it creates multiple resolutions of an mp4 and breaks them into chunks to be streamed to the client. It also creates a thumbnail for the video.</p>
+
+                        <p>I changed the project to Gauntlet Exchange for users to exchange information. The idea is record a teaching video, then upload and analyze it. The video is transcribed and analyzed for filler words with a report generated to help the user improve.</p>
+                        
+                        <h4>Technologies</h4>
+                        <ul class="tech-list">
+                            <li><strong>FFMPEG</strong> for video processing</li>
+                            <li><strong>Azure Queue Storage</strong> for video processing queues</li>
+                            <li><strong>Kubernetes</strong> for microservices that auto-scale to meet queue and compute demands</li>
+                            <li><strong>Azure Speech Services</strong> for transcribing the video</li>
+                            <li><strong>OpenAI</strong> for analyzing the transcript</li>
+                            <li><strong>WebView</strong> for <strong>Android & iOS</strong> mobile apps</li>
+                        </ul>
+                        
+                        <div class="project-links">
+                            <a href="https://gist.github.com/paul-shell/aa8da689b5ab57464adbad7b6d43cfee" target="_blank" class="link">v1 Source <i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-updates">
+                    <!-- <div class="media-container">
+                        <img src="img/upload_service.gif" alt="Video Upload Service Demo" class="media-item">
+                    </div> -->
+                    
+                    <blockquote class="twitter-tweet" data-width="550" data-theme="dark">
+                        <a href="https://twitter.com/PaulShellDev/status/1886638610222285050"></a>
+                    </blockquote>
+                    
+                    <blockquote class="twitter-tweet" data-width="550" data-theme="dark">
+                        <a href="https://twitter.com/PaulShellDev/status/1887303153399275621"></a>
+                    </blockquote>
+                    
+                    <blockquote class="twitter-tweet" data-width="550" data-theme="dark">
+                        <a href="https://twitter.com/PaulShellDev/status/1891893880179560728"></a>
+                    </blockquote>
+                </div>
+            </div>
+            
+            <div class="project-card-full">
+                <div class="project-header">
+                    <h3>CRM</h3>
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-image">
+                        <img src="img/crm/requester.gif" alt="CRM Project - Requester Interface" class="project-img">
+                    </div>
+                    
+                    <div class="project-info-full">
+                        <p>Originally started as a Star Wars themed support CRM for Death Star maintenance as a way of learning <strong>React</strong>. Redid as a sales CRM for real future use.</p>
+                        <p>Prospects for new customers, qualifies them, then creates a personalized email sequence for cold outreach.</p>
+                        
+                        <h4>Technologies</h4>
+                        <ul class="tech-list">
+                            <li><strong>OAuth</strong> for authentication with Google, Apple, and Microsoft</li>
+                            <li><strong>Google Places API</strong> to Prospect for new customers</li>
+                            <li><strong>Azure Cosmos DB</strong> for database</li>
+                            <li><strong>Playwright</strong> for additional data gathering</li>
+                            <li><strong>OpenAI</strong> for analysis and email generation</li>
+                        </ul>
+                        
+                        <div class="project-links">
+                            <!-- <a href="#" class="link">Source <i class="fab fa-github"></i></a>
+                            <a href="#" class="link">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="link">Video <i class="fas fa-video"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-updates">
+                    <div class="media-container">
+                        <img src="img/crm/prospector.gif" alt="CRM Prospector Tool Demo" class="media-item">
+                    </div>
+                    
+                    <blockquote class="twitter-tweet" data-width="550" data-theme="dark">
+                        <a href="https://twitter.com/PaulShellDev/status/1881839526722916724"></a>
+                    </blockquote>
+                    
+                    <blockquote class="twitter-tweet" data-width="550" data-theme="dark">
+                        <a href="https://twitter.com/PaulShellDev/status/1882147358693380469"></a>
+                    </blockquote>
+                    
+                    <blockquote class="twitter-tweet" data-width="550" data-theme="dark">
+                        <a href="https://twitter.com/PaulShellDev/status/1882304990594867318"></a>
+                    </blockquote>
+                </div>
+            </div>
+            
+            <div class="project-card-full">
+                <div class="project-header">
+                    <h3>Chat</h3>
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-image">
+                        <img src="img/chat.jpg" alt="Chat Interface Project" class="project-img">
+                    </div>
+                    
+                    <div class="project-info-full">
+                        <p>Redid the Chat project from scratch in 5 hours to prove AI can handle <strong>Clean Architecture</strong> and <strong>Test-Driven Development</strong> to write <strong>Clean Code</strong>. Chat with Tron's MCP, Tron, and CLU! Complete with a personal identity disc that uses the identity provider's avatar and name.</p>
+
+                        <p>Each Secure Line (DM) chat has the personality to match the Tron movies. (As you can see, Master Control Program isn't very friendly towards us users.)</p>
+                        
+                        <h4>Technologies</h4>
+                        <ul class="tech-list">
+                            <li><strong>OAuth</strong> with Google, Apple, and Microsoft authentication</li>
+                            <li><strong>OpenAI</strong> for streaming chat responses</li>
+                            <li><strong>Azure Cosmos DB</strong> for <strong>Vector RAG</strong> database</li>
+                            <li><strong>Blob Storage</strong> for file uploading</li>
+                            <li><strong>SignalR</strong> for real-time updates</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-updates">
+                    <!-- <div class="media-container">
+                        <img src="img/chat_demo.gif" alt="Chat Interface Demo" class="media-item">
+                    </div> -->
+                
+                    <blockquote class="twitter-tweet" data-width="550" data-theme="dark">
+                        <a href="https://twitter.com/PaulShellDev/status/1880303015737045170"></a>
+                    </blockquote>
+
+                    <blockquote class="twitter-tweet" data-width="550" data-theme="dark">
+                        <a href="https://twitter.com/PaulShellDev/status/1880304079399952551"></a>
+                    </blockquote>
+                    
+                    <blockquote class="twitter-tweet" data-width="550" data-theme="dark">
+                        <a href="https://twitter.com/PaulShellDev/status/1880400549797065066"></a>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Older AI Projects/Startups Section -->
+    <section id="older-projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Older AI Projects/Startups</h2>
+            
+            <div class="project-card-full">
+                <div class="project-header">
+                    <h3>Vortext (I Am)</h3>
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-image">
+                        <img src="img/vortext.jpg" alt="Vortext - Messaging Hub Project" class="project-img">
+                    </div>
+                    
+                    <div class="project-info-full">
+                        <p><b>2018</b></p>
+                        <p>During a TechStars Startup Weekend, I led a team of three to design and develop a messaging hub that unified email, social media, and text into one app. Using <strong>Azure Machine Learning</strong> and <strong>Xamarin</strong>, we prioritized urgent messages with an Eisenhower matrix model, simplifying workflows and reducing the need to check multiple apps. Over 54 hours, we rapidly iterated on feedback from judges and mentors, delivering a proof-of-concept that secured 1st place. Post-event, I collaborated with investors, mentors, and early users to refine features, optimize messaging flow, and grow adoption.</p>
+                        
+                        <h4>Technologies</h4>
+                        <ul class="tech-list">
+                            <li><strong>Natural Language Processing (NLP)</strong> pipeline with intent recognition</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="project-updates">
+                    <blockquote class="twitter-tweet" data-width="550" data-theme="dark">
+                        <a href="https://twitter.com/swphx/status/965640643966939136"></a>
+                    </blockquote>
+                </div>
+            </div>
+            
+            <div class="project-card-full">
+                <div class="project-header">
+                    <h3>Dioth (Raz Recognition)</h3>
+                </div>
+                
+                <div class="project-content">
+                    <div class="project-image">
+                        <img src="img/dioth.jpg" alt="Dioth - Accessibility Gaming Project" class="project-img">
+                    </div>
+                    
+                    <div class="project-info-full">
+                        <p><b>2014</b></p>
+                        <p>What started as a summer project to help a quadriplegic friend play World of Warcraft independently turned into a larger effort to improve gaming accessibility. I designed and developed the desktop application and API using <strong>C#</strong>, <strong>ASP.NET Web API</strong>, and <strong>Azure</strong> technologies while gathering feedback from over 3,000 handicapped gamers. The project gained momentum when it was selected at the University of Houston's 3-Day Startup event, where I led a team of six to iterate on the idea. We pitched it and won Microsoft BizSpark, securing $120,000 in Azure credits.</p>
+                        
+                        <h4>Technologies</h4>
+                        <ul class="tech-list">
+                            <li>Windows <strong>Speech Recognition (STT)</strong></li>
+                        </ul>
+                        
+                        <div class="project-links">
+                            <a href="https://www.youtube.com/watch?v=pMM-k4v6hxE" target="_blank" class="link">Video <i class="fas fa-video"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <table class="cert-table">
+                <thead>
+                    <tr>
+                        <th>Certification</th>
+                        <th>Date Obtained</th>
+                        <th>Verification</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="cert-name">
+                                <i class="fab fa-microsoft"></i>
+                                <span>Microsoft Certified: Azure AI Engineer</span>
+                            </div>
+                        </td>
+                        <td>2024</td>
+                        <td><a href="https://learn.microsoft.com/en-us/users/paul-shell/credentials/certification/azure-ai-engineer" class="cert-link" target="_blank">Verify</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cert-name">
+                                <i class="fab fa-microsoft"></i>
+                                <span>Microsoft Generative AI Essentials</span>
+                            </div>
+                        </td>
+                        <td>2023</td>
+                        <td><a href="https://www.linkedin.com/learning/certificates/8381c9bb0d726cb4913e3c27613a003bebe8794d5f557fdb70038d6c61c614f2?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BYsGjXr87RTm8lu%2FVyS0gKQ%3D%3D" class="cert-link" target="_blank">Verify</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cert-name">
+                                <i class="fab fa-microsoft"></i>
+                                <span>Microsoft Azure Architect Design</span>
+                            </div>
+                        </td>
+                        <td>2020</td>
+                        <td><a href="https://www.credly.com/badges/b2921c99-9673-44e6-9807-f63f66ec2cf3/public_url" class="cert-link" target="_blank">Verify</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cert-name">
+                                <i class="fab fa-microsoft"></i>
+                                <span>Microsoft Certified: DevOps Engineer Expert</span>
+                            </div>
+                        </td>
+                        <td>2019</td>
+                        <td><a href="https://www.credly.com/badges/c3c948b3-e1ce-4399-8a88-0c18aea4ad7d/public_url" class="cert-link" target="_blank">Verify</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cert-name">
+                                <i class="fab fa-microsoft"></i>
+                                <span>Microsoft Professional Program in Artificial Intelligence</span>
+                            </div>
+                        </td>
+                        <td>2017</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cert-name">
+                                <i class="fab fa-microsoft"></i>
+                                <span>Microsoft Professional Program in Data Science</span>
+                            </div>
+                        </td>
+                        <td>2017</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cert-name">
+                                <i class="fab fa-microsoft"></i>
+                                <span>Microsoft Certified Solutions Developer: App Builder</span>
+                            </div>
+                        </td>
+                        <td>2016</td>
+                        <td><a href="https://www.credly.com/badges/7ab3a2f5-d576-437f-a344-1747133fcd49/public_url" class="cert-link" target="_blank">Verify</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cert-name">
+                                <i class="fab fa-microsoft"></i>
+                                <span>Microsoft Specialist: Programming in C#</span>
+                            </div>
+                        </td>
+                        <td>2015</td>
+                        <td><a href="https://www.credly.com/badges/879074e6-1d4d-4f07-9e21-3952c7574018/public_url" class="cert-link" target="_blank">Verify</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Recommendations Section -->
+    <section id="recommendations" class="recommendations">
+        <div class="container">
+            <h2 class="section-title">Recommendations</h2>
+            <div class="recommendations-grid">
+            <div class="recommendation-card">
+                    <div class="recommendation-content">
+                        <i class="fas fa-quote-left quote-icon quote-left"></i>
+                        <p>During this time, I have seen Paul's unwavering enthusiasm and passion for exploring and implementing new technologies in development-related projects. Paul's ability to keep up with the ever-evolving technology landscape has been invaluable to our team's success. I highly recommend Paul for any project that requires technical expertise and teamwork.</p>
+                        <i class="fas fa-quote-right quote-icon quote-right"></i>
+                    </div>
+                    <div class="recommendation-author">
+                        <div class="author-logo">
+                            <img src="img/microsoft_logo.jpg" alt="Microsoft Logo">
+                        </div>
+                        <div class="author-info">
+                            <p class="author-name">Sanu S.</p>
+                            <p class="author-title">Azure Engineer at Microsoft</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommendation-card">
+                    <div class="recommendation-content">
+                        <i class="fas fa-quote-left quote-icon quote-left"></i>
+                        <p>He has demonstrated his skills multiple times while I had the opportunity to work with him by creating POCs for customers and also building several personal projects to keep in touch with the latest. He is keen on learning new technologies and likes to get some hands-on experience as soon as something new comes up. He also shows interest in designing architecture on complex scenarios. He is very kind and nice to interact with.</p>
+                        <i class="fas fa-quote-right quote-icon quote-right"></i>
+                    </div>
+                    <div class="recommendation-author">
+                        <div class="author-logo">
+                            <img src="img/microsoft_logo.jpg" alt="Microsoft Logo">
+                        </div>
+                        <div class="author-info">
+                            <p class="author-name">Ashish S.</p>
+                            <p class="author-title">Advanced Cloud Engineer at Microsoft</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="">
+        <div class="container">
+            <p>&copy; 2025 Paul Shell. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Chat Box -->
+    <div class="chat-box-container">
+        <div class="chat-box-button" id="chatBoxToggle">
+            <i class="fas fa-comment"></i>
+        </div>
+        <div class="chat-box" id="chatBox">
+            <div class="chat-box-header">
+                <h3>Chat with me</h3>
+                <button class="chat-box-close" id="chatBoxClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-box-messages" id="chatBoxMessages">
+                <div class="message received">
+                    <p>Hi there! How can I help you today?</p>
+                    <span class="message-time">Just now</span>
+                </div>
+            </div>
+            <div class="chat-box-input">
+                <input type="text" id="chatBoxInput" placeholder="Type your message...">
+                <button id="chatBoxSend">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="tilt.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script>
+        // Twitter embed dynamic resizing
+        window.twttr = (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+            t._e = [];
+            t.ready = function(f) {
+                t._e.push(f);
+            };
+            return t;
+        }(document, "script", "twitter-wjs"));
+
+        window.twttr.ready(function(twttr) {
+            function resizeTweets() {
+                var tweets = document.querySelectorAll('.twitter-tweet');
+                for (var i = 0; i < tweets.length; i++) {
+                    var tweet = tweets[i];
+                    
+                    // Get appropriate width based on screen size
+                    var width;
+                    if (window.innerWidth >= 1200) {
+                        width = 330; // Large desktop - 3 per row
+                    } else if (window.innerWidth >= 768) {
+                        width = 350; // Medium screens - 2 per row
+                    } else {
+                        width = Math.min(550, tweet.parentElement.offsetWidth); // Mobile - full width
+                    }
+                    
+                    // Set data-width attribute dynamically
+                    if (tweet.getAttribute('data-width') !== width.toString()) {
+                        tweet.setAttribute('data-width', width.toString());
+                    }
+                    
+                    // Force reload to apply new width
+                    if (tweet._rendered) {
+                        twttr.widgets.load(tweet.parentElement);
+                    }
+                }
+            }
+
+            // Initial resize
+            twttr.events.bind('rendered', function() {
+                resizeTweets();
+            });
+
+            // Resize on window resize
+            var resizeTimeout;
+            window.addEventListener('resize', function() {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(resizeTweets, 300);
+            });
+        });
+    </script>
+</body>
+</html>
